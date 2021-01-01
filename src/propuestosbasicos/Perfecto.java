@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Franco
+ * @author Franco David Laghezza
  */
 public class Perfecto {
     
