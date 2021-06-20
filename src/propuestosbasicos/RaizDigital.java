@@ -25,11 +25,7 @@ public class RaizDigital {
             n /= 10;
         } 
 
-        if( ac >= 10) {
-            return digital_root(ac);
-        }
-
-        return ac;
+        return ac <= 9 ? ac : digital_root(ac);
     
   }
 }
