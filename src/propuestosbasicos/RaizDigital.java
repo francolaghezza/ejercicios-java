@@ -13,30 +13,23 @@ public class RaizDigital {
     
     public static void main(String[] args) {
         
-        int num = 347;
-        int resto = 0;
-        int resultado = 0;
-        
-        while(num > 0){
-
-            resto = num % 10;
-            
-            resultado += resto;
-            
-            num /= 10;
-            
-        }
-        
-        while(resultado >= 10){
-            
-            resto = resultado % 10;
-            
-            resultado /= 10;
-                        
-            resultado += resto;
- 
-        }
-        System.out.println(resultado);
+        System.out.println(digital_root(347));
         //Output -> 347 = 3 + 4 + 7 -> 14 = 1 + 4 -> 5
     }
+    
+    public static int digital_root(int n) {
+    int ac = 0;
+    
+    while (n >= 1) {
+        ac += n % 10;
+        n /= 10;
+    } 
+    
+    if( ac >= 10) {
+        return digital_root(ac);
+    }
+    
+    return ac;
+    
+  }
 }
