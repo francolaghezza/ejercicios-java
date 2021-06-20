@@ -18,18 +18,18 @@ public class RaizDigital {
     }
     
     public static int digital_root(int n) {
-    int ac = 0;
-    
-    while (n >= 1) {
-        ac += n % 10;
-        n /= 10;
-    } 
-    
-    if( ac >= 10) {
-        return digital_root(ac);
-    }
-    
-    return ac;
+        int ac = 0;
+
+        while (n >= 1) {
+            ac += n % 10;
+            n /= 10;
+        } 
+
+        if( ac >= 10) {
+            return digital_root(ac);
+        }
+
+        return ac;
     
   }
 }
